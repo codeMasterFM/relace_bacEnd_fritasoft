@@ -1,0 +1,75 @@
+﻿body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url("/asset/705836.jpg");
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Container-Card {
+    border-radius: 20px;
+    box-shadow: 1px 5px 1px 0px rgba(0, 0, 0, 0.356);
+    background-color: rgba(239, 233, 233, 0.244);
+    display: flex;
+    
+}
+
+.Images {
+    height: 100px;
+}
+
+form {
+    padding: 10px;
+    gap: 10px;
+}
+
+    form > label {
+        color: aliceblue;
+        font-size: large;
+        text-shadow: 1px 1px 1px black;
+    }
+
+    form > input {
+        width: 100%;
+        outline: none;
+        border: none;
+        border-bottom: 3px dashed rgb(85, 85, 220);
+        background-color: rgba(16, 16, 172, 0.16);
+        color: aliceblue;
+        font-family: 'Courier New', Courier, monospace;
+        text-shadow: 1px 1px 1px black;
+        font-size: large;
+    }
+
+        form > input[type="submit"] {
+            background-color: rgba(0, 0, 20, 0.619);
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 20px;
+            border-radius: 20px;
+            margin-top: 10px;
+            border: none;
+            transition: all 200ms linear;
+        }
+
+            form > input[type="submit"]:hover {
+                background-color: rgb(125, 244, 202);
+                color: rgb(255, 255, 255);
+            }
+
+
+        form > input:-webkit-autofill {
+            outline: none;
+            border: none;
+            border-bottom: 3px dashed rgb(85, 85, 220);
+            background-color: rgba(16, 16, 172, 0.16);
+            color: aliceblue;
+            font-family: 'Courier New', Courier, monospace;
+            text-shadow: 1px 1px 1px black;
+            font-size: large;
+        }

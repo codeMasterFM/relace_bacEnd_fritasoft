@@ -1,0 +1,86 @@
+﻿@{
+    Layout = null;
+}
+@model List<string>
+
+
+    <style>
+body{
+    background-color: #fff;
+}
+.container {
+display:flex;
+margin:5%;
+flex-wrap:wrap;
+gap:20px;
+
+}
+
+h4 {
+    text-align: center;
+}
+
+.Card-Container {
+    display: flex;
+    width: 360px;
+    flex-direction: column;
+    border-radius: 20px;
+    background-color: aliceblue;
+    padding: 20px;
+        border: solid 1px #569DAA;
+    }
+
+.auto-card {
+    text-align: center;
+    word-wrap: normal;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+    
+
+</style>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="~/css/Home.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        @{
+            int i = 0;
+            foreach (var item in Model)
+            {
+                i++;
+                <div class="Card-Container">
+                    <div>
+                        <h4>Instruccione</h4>
+                    </div>
+                    <div>
+                        <label>1-Escannerar el codigo QR con su celular.</label>
+                        <br />
+                        <label>
+                            2-Solicitar sus bebidas y alimenos en la pagina.
+                        </label>
+                        <br />
+                        <label>3-Pagar sus productos. </label>
+                    </div>
+                    <div class="auto-card">
+                        <h4>Mesa-@i</h4>
+                        <img src="data:image/png;base64,@item" alt="QR" height="200" width="200" />
+                        <label>Desarrollado por Franklynp87@gmail.com</label>
+                    </div>
+                </div>
+                
+            }
+        }
+    </div>
+    
+</body>
+</html>

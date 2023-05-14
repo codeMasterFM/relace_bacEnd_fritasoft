@@ -1,0 +1,50 @@
+body {
+    margin: 0px;
+    background-color: white;
+    color: black;
+    text-align: center;
+}
+
+
+nav {
+    background-color: #504949;
+    display: flex;
+    justify-content: end;
+    font-size: 20px;
+    text-shadow: 1px 1px 1px black;
+}
+
+.title {
+    text-align: center;
+}
+
+.Container-Nav {
+    float: left;
+    justify-content: space-between;
+    width: 55%;
+    display: flex;
+    padding: 10px;
+    text-align: center;
+    text-align: center;
+    color: aliceblue;
+}
+
+    .Container-Nav > div > h3 {
+        cursor: pointer;
+    }
+
+.UserTitle {
+    background-color: brown;
+    height: 70px;
+    width: 70px;
+    border-radius: 100px;
+    color: aliceblue;
+    box-shadow: 1px 4px 0px 0px rgb(255, 255, 255);
+}
+
+.Container {
+margin:auto;
+display:flex;
+flex-direction:column;
+align-content:center;
+}

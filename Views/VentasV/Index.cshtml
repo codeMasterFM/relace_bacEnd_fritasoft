@@ -1,0 +1,87 @@
+﻿@using Back_End_Restaurante.Dtos;
+@model List<VentasDtos>
+@{
+
+}
+<link rel="stylesheet" href="~/css/ventas.css" />
+<div class="Card_Container">
+    @{
+        if (Model.Count >= 1)
+        {
+            foreach (var item in Model)
+            {
+                <div class="card">
+                    <div class="tools">
+                        <div class="circle">
+                            <span class="red box"></span>
+                        </div>
+                        <div class="circle">
+                            <span class="yellow box"></span>
+                        </div>
+                        <div class="circle">
+                            <span class="green box"></span>
+                        </div>
+                    </div>
+                    <div class="card__content">
+                        <h5>mesa</h5>
+                        <span>@item.Mesa</span>
+                        <span><img src="data:image/png;base64,@item.Image" height="60" alt="Error image" /></span>
+                        <h6>@item.Name</h6>
+                        <h4>Precio</h4>
+                        <h6>@item.Price</h6>
+                        <form>
+                            <button asp-action="Status" asp-controller="VentasV" asp-route-id="@item.VentasID">
+                                Entregado
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            }
+        }
+        else
+        {
+            <div class="card">
+                <div class="tools">
+                    <div class="circle">
+                        <span class="red box"></span>
+                    </div>
+                    <div class="circle">
+                        <span class="yellow box"></span>
+                    </div>
+                    <div class="circle">
+                        <span class="green box"></span>
+                    </div>
+                </div>
+                <div class="card__content">
+                    <h1>No tiene Pedidos</h1>
+                            
+                </div>
+            </div>
+        }
+    }
+
+
+</div>
+<script>
+    /*
+    // función que hace una petición AJAX al servidor y actualiza la página
+    function actualizarVista() {
+        console.log("hola");
+        $.ajax({
+            url: '@Url.Action("Index", "VentasV")', // aquí debes reemplazar "Index" y "Home" con el nombre del método y controlador que corresponden a la vista
+            type: 'GET',
+            success: function (result) {
+                $('html').html(result);
+                console.log("hola");// aquí debes reemplazar "#contenido" con el selector de la parte de la página que deseas actualizar
+            },
+            error: function (xhr, status, error) {
+                console.log('Error al actualizar la vista: ' + error);
+            }
+        });
+    }
+
+    // llama a la función actualizarVista cada 5 minutos
+    setInterval(actualizarVista, 1 * 60 * 1000);
+    */
+</script>
+

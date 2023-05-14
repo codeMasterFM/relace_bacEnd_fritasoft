@@ -1,0 +1,34 @@
+﻿@model IEnumerable<DB.Negocio>
+
+    <a asp-action="Create" class="btn btn-primary">Agregar</a>
+    <table class="table">
+        <thead>
+            <tr>
+            <th scope="col">#</th>
+            <th scope="col">Nombres</th>
+            <th scope="col">telefono</th>
+            <th scope="col">Direccion</th>
+            <th scope="col">Rnc</th>
+            <th scope="col">Action</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            @{
+                foreach (var item in Model)
+                {
+
+
+                    <tr>
+                    <th scope="col">@item.NegocioID</th>
+                        <td>@item.Name</td>
+                        <td>@item.Telefono</td>
+                        <td>@item.Direccion</td>
+                        <td>@item.Rnc</td>
+                        <td><a asp-action="Delete" asp-route-id="@item.NegocioID" class="btn btn-outline-danger">eliminar</a>/<a asp-action="Edit" asp-route-id="@item.NegocioID" class="btn btn-outline-warning">editar</a>
+                        <td>
+                    </tr>
+                }
+            }
+        </tbody>
+    </table>

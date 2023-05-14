@@ -1,0 +1,56 @@
+﻿@model DB.Productos
+
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Categoria</h4>
+<hr />
+<div class="row">
+    <div class="col-3 mx-auto">
+        <form asp-action="Create" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Name" class="control-label">Nombre</label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Price" class="control-label">Precio</label>
+                <input asp-for="Price" class="form-control" />
+                <span asp-validation-for="Price" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SetupCost" class="control-label">Costo de produccion</label>
+                <input asp-for="SetupCost" class="form-control" />
+                <span asp-validation-for="SetupCost" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CategoriaID" class="control-label">Categoria</label>
+                <select asp-for="CategoriaID" class="form-control" asp-items="ViewBag.Idcategoria"></select>
+                <span asp-validation-for="SetupCost" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label  class="control-label">imagen</label>
+                <input class="form-control" type="file" name="File" />
+                <span asp-validation-for="SetupCost" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

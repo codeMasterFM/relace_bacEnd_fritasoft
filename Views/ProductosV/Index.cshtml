@@ -1,0 +1,35 @@
+﻿@model IEnumerable<DB.Productos>
+
+
+<a asp-action="Create" class="btn btn-primary">Agregar</a>
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">precio</th>
+            <th scope="col">Costos de produccion</th>
+            <th scope="col">Imagen</th>
+            <th scope="col">Actiones</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @{
+            foreach (var item in Model)
+            {
+
+
+                <tr>
+                    <td>@item.ProudctoID</td>
+                    <td>@item.Name</td>
+                    <td>@item.Price</td>
+                    <td>@item.SetupCost</td>
+                    <td><img src="data:image/png;base64,@item.Image" alt="base64" height="100"/></td>
+                    <td><a asp-action="Delete" asp-route-id="@item.ProudctoID" class="btn btn-outline-danger">eliminar</a>/<a asp-action="Edit" asp-route-id="@item.CategoriaID" class="btn btn-outline-warning">editar</a>
+                    </td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>

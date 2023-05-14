@@ -1,0 +1,146 @@
+﻿@{
+    Layout = null;  
+}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" type="image/x-icon" href="~/asset/images/favicon.ico" />
+    <link rel="stylesheet" href="~/css/Home.css" />
+    <title>Frita</title>
+  </head>
+  <body>
+    <nav>
+      <div class="Container-Nav">
+        <div>
+          <h3>DashBoard Frita</h3>
+        </div>
+
+        <div class="UserTitle">
+          <h3>KT</h3>
+        </div>
+      </div>
+    </nav>
+
+    <div class="Container">
+      <div class="card">
+        <div class="card2">
+          <label>Categorias</label>
+          <span class="TextContaint"> 
+          Al precinar es card tendra acceso a crear y modifcar las categorias de productos existentes  
+          </span>
+          <form>
+           <button asp-controller="CategoriaV" asp-action="Index">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span> Preciona me
+          </button>
+          </form>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card2">
+          <label>Productos</label>
+          <span class="TextContaint"> 
+            Al precinar es card tendra acceso a crear y modifcar los Productos existentes  
+          </span>
+          <form>
+            <button asp-controller="ProductosV" asp-action="Index">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span> Preciona me
+          </button>
+          </form>
+        </div>
+      </div>
+
+
+      <div class="card">
+        <div class="card2">
+          <label>Ventas</label>
+          <span class="TextContaint"> 
+          Al precinar es card tendra acceso a crear y modifcar los Productos existentes  
+          </span>
+                <form>
+                    <button asp-controller="VentasV" asp-action="Index">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span> Preciona me
+                    </button>
+                </form>
+        </div>
+      </div>
+
+
+      <div class="card">
+        <div class="card2">
+          <label>Mi negocio</label>
+          <span class="TextContaint"> 
+          Al precinar es card tendra acceso a crear y modifcar las categorias de productos existentes  
+          </span>
+                <form>
+                    <button asp-controller="NegocioV" asp-action="Index">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span> Preciona me
+                    </button>
+                </form>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card2">
+          <label>Ticked </label>
+          <span class="TextContaint"> 
+            <form asp-controller="TMesasV" method="post">
+              <label>Nombre del local</label>
+              <input name="local" type="text">
+              <label>Cantidad de mesas</label>
+              <input name="Mesas" type="number">
+          <button asp-controller="TmesasV" asp-action="Index"> 
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+             <span></span>Preciona me
+          </button>
+            </form>
+          </span>
+        </div>
+      </div>
+
+        <div class="card">
+            <div class="card2">
+                <label>Ayuda</label>
+                <span class="TextContaint">
+                    Al precinar es card tendra acceso a crear y modifcar las categorias de productos existentes
+                </span>
+                <form>
+                    <button asp-controller="CategoriaV" asp-action="Index">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span> Preciona me
+                    </button>
+                </form>
+            </div>
+        </div>
+      </div>
+  </body>
+</html>
+<script src="./DashBoard.js"></script>
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="~/js/site.js" asp-append-version="true"></script>
